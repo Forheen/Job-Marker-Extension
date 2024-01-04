@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+
+    "name": "Job Marker",
+    "version": "0.1.0",
+    "description": "Saving Job Openings and relevant links",
+    "permissions": ["storage", "tabs"],
+
+   
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "My Job List",
+      "default_popup": "popup.html"
+    }
+}

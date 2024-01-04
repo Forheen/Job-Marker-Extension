@@ -1,0 +1,361 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* 
+========================
+Variables
+========================
+*/
+
+
+:root {
+    
+    font-size: 15px;
+    
+    /* Primary */
+    --var-soft-blue: hsl(215, 89%, 34%);
+    --var-cyan: hsl(178, 100%, 50%);
+    /* Neutral */
+    --var-main-darkest: hsl(217, 54%, 11%);
+    --var-card-dark: hsl(215, 95%, 7%);
+    --var-line-dark: hsl(215, 32%, 27%);
+    --var-lightest: white;
+    
+    /* Fonts */
+    
+    --var-heading: normal normal 600 0.6em/0.6em 'Outfit', sans-serif;
+    
+    --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+    
+    --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+}
+
+.container {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+
+    width: 400px;
+    color: #314d3e;
+            align-items: center;
+    text-align: center ;
+    
+  }
+  
+  body {
+    width: 400px;
+    font-family: Roboto, sans-serif;
+    display: grid;
+    place-items: center;
+}
+  .title {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+  }
+
+  .countdiv{
+    text-align: right;
+    padding: 15px;
+  }
+  .textbox {
+    width: 100%;
+    font-size: 12px;
+    margin: 0;
+    padding: 0px 2px;
+  }
+  
+  .textbox:focus {
+    outline: 0;
+    border-color: #66afe9;
+  }
+  
+  .bookmarks {
+    margin: 5px 5px;
+    padding: 3px;
+  }
+  
+  .bookmark {
+    display: flex;
+    border-bottom-color: #00254d;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0.8rem;
+    padding: 3px;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+  }
+  
+  .bookmark-title {
+    padding-left: 2px;
+  }
+  
+  .bookmark-controls img {
+    margin: 0 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .bookmark-controls {
+    flex: auto;
+    text-align: right;
+  }
+
+  #clearAllButton{
+    background-color: #ca0101; /* Green background color */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underlines from links */
+    display: inline-block; /* Make the element behave like an inline element */
+    font-size: 14px; /* Set font size */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    border-radius: 4px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+  }
+  
+  #clearAllButton:hover {
+    background-color: #a04545; /* Darker green color on hover */
+  }
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.menu-button:hover .dropdown-content {
+    display: block;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.tiny-icon{
+    width: 1em;
+    height: 1em;
+    padding-left: 5px;
+}
+.icon-div{
+    width: 100%;
+
+    text-align: right;
+
+}
+.c-checkbox {
+    display: none;
+}
+
+.c-checkbox:checked + .c-formContainer .c-form {
+    width: 33.5em;
+}
+
+.c-checkbox:checked + .c-formContainer .c-form__toggle {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+.c-checkbox:checked + .c-formContainer .c-form__input,
+.c-checkbox:checked + .c-formContainer .c-form__buttonLabel {
+    transition: 0.2s 0.1s;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle {
+    pointer-events: intial;
+    cursor: default;
+}
+
+.c-formContainer,
+.c-form,
+.c-form__toggle {
+    width: 13em;
+    height: 3em;
+}
+
+.c-formContainer {
+    position: relative;
+    font-weight: 700;
+}
+
+.c-form,
+.c-form__toggle {
+    position: absolute;
+    border-radius: 3em;
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+
+.c-form {
+    left: 1em;
+
+    box-sizing: border-box;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.c-form__toggle {
+    color: #0c3bd3;
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-form__toggle::before {
+    font-size: 1.4em;
+    content: attr(data-title);
+}
+
+.c-form__input,
+.c-form__button {
+
+    font: inherit;
+    border: 0;
+    outline: 0;
+    border-radius: 3em;
+    box-sizing: border-box;
+}
+
+.c-form__input,
+.c-form__buttonLabel {
+    font-size: 1.3em;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    transition: 0s;
+}
+
+.c-form__input {
+    color: #cccdff;
+    height: 100%;
+    width: 100%;
+    padding: 0 0.714em;
+}
+
+.c-form__input::placeholder {
+    color: currentColor;
+}
+
+.c-form__input:required:valid {
+    color: #000000;
+}
+
+.c-form__input:required:valid + .c-form__buttonLabel {
+    color: #ffffff;
+}
+
+
+.c-form__buttonLabel {
+    color: #ffffff;
+    height: 100%;
+    width: auto;
+}
+
+.c-form__buttonLabel::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.c-form__button {
+    color: inherit;
+    padding: 0;
+    height: 100%;
+    width: 5em;
+    background-color: #104bca;
+}
+
+
+
+
+.card-container {
+    width: 90%;
+    
+    margin: auto;
+    background-color: white;
+    border-radius: 1px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem; /* Change value to scale */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.small-image {
+    width: 1.6em;
+    margin-right: .5em;
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0 0 2px #888;
+}
+
+.small-avatar {
+    width: 2em;
+    border-radius: 200px;
+    outline: 2px solid white;
+    margin-right: 1.4em;
+}
+
+
+div.coin-base, .time-left, .card-attribute {
+    display: flex;
+    align-items: center;
+}
+
+
+a {
+    font: var(--var-heading);
+    color: var(--var-line-dark);
+    text-decoration: none;
+    font-weight: 100;
+}
+
+h2 {
+    font: var(--var-small-heading);
+    color: var(--var-lightest);
+    /* padding on .coin-base */
+}
+
+p {
+    font: var(--var-para);
+    color: var(--var-soft-blue);
+    
+}
+
+span {
+    color: white;
+}
+
+div.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

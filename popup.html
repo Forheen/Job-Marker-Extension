@@ -1,0 +1,27 @@
+<link href="popup.css" rel="stylesheet" type="text/css" />
+<script type="module" src="popup.js"></script>
+
+<div class="container">
+  <div>
+    
+    <div class="title">Your Personal Job Marker</div>
+<br>
+<br>
+    <!--addJobButton-->
+    <input class="c-checkbox" type="checkbox" id="checkbox">
+<div class="c-formContainer">
+  <form class="c-form" action="">
+    <input class="c-form__input" id="jobTitle" required>
+    <label class="c-form__buttonLabel" for="checkbox">
+      <button class="c-form__button" type="button" id="addJobButton">Mark</button>
+    </label>
+    <label class="c-form__toggle" for="checkbox" data-title="Save Job"></label>
+  </form>
+</div>
+
+<div class="countdiv"><p id="TotalJLabel">0</p> </div>
+    <div class="bookmarks" id="bookmarks"></div>
+    <button id="clearAllButton">Clear All</button> <!-- Clear All links-->
+
+  </div>
+</div>
